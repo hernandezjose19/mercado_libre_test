@@ -1,0 +1,8 @@
+SELECT Zona, CarrierID, 
+	(CASE 
+		WHEN cantidad_envios.Zona_a_enviar != "JOSE" THEN cantidad_envios.Cantidad_envios * costos.Costo
+    END) AS suma_total
+FROM cantidad_envios
+INNER JOIN costos
+ON cantidad_envios.Zona_a_enviar = costos.Zona
+ORDER BY Zona_a_enviar AND CarrierID;
