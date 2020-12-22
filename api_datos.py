@@ -20,5 +20,6 @@ def obtener_datos():
         f.write(name_category + "\n")
     
     print(f"el archivo se guardo en la ruta {ruta_archivo} exitosamente")
+    f.close()
 
 obtener_datos()
